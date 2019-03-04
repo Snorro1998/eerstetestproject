@@ -7,11 +7,18 @@ public class Player_Movement : MonoBehaviour {
 	public float speed = 6.0f;
 	public float gravity = -9.8f;
 	
+	Vector3 startPosition;
+	Quaternion startRotation;
+	
 	private CharacterController _charCont;
+	
 	
     // Start is called before the first frame update
     void Start()
     {
+		startPosition = transform.position;
+		startRotation = transform.rotation;
+		
         _charCont = GetComponent<CharacterController> ();
     }
 
@@ -28,5 +35,13 @@ public class Player_Movement : MonoBehaviour {
 		movement *= Time.deltaTime;
 		movement = transform.TransformDirection(movement);
 		_charCont.Move(movement);
+		
+		if (transform.position.y < -1f) {
+			respawn();
+		}
     }
+	
+	void respawn() {
+		this.transform.position = startPosition;
+	}
 }
