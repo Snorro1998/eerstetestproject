@@ -65,6 +65,9 @@
     <Compile Include="Assets\_Game\Scripts\scrCoin.cs" />
     <Compile Include="Assets\_Game\Scripts\scrScore.cs" />
     <Compile Include="Assets\scrAudioManager.cs" />
+    <Compile Include="Assets\scrBadguy.cs" />
+    <Compile Include="Assets\scrDontDestroy.cs" />
+    <Compile Include="Assets\scrEndLevel.cs" />
     <Compile Include="Assets\scrHurt.cs" />
     <Compile Include="Assets\Sound.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

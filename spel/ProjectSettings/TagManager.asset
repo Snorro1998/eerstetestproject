@@ -6,6 +6,8 @@ TagManager:
   tags:
   - points
   - player
+  - audioController
+  - walls
   layers:
   - Default
   - TransparentFX
