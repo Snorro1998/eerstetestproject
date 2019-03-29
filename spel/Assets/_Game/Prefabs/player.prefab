@@ -139,8 +139,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axes: 1
-  minimumVert: -45
-  maximumVert: 45
+  minimumVert: -75
+  maximumVert: 75
   sensHorizontal: 10
   sensVertical: 10
   _rotationX: 0

@@ -4,28 +4,40 @@ using UnityEngine.SceneManagement;
 public class scrScore : MonoBehaviour
 {
     public int score = 0;
-    /*
-    private void Awake()
+    public int highScore = 0;
+
+    private void Start()
     {
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("GameController");
-        if (objs.Length > 1)
+        highScore = PlayerPrefs.GetInt("Highscore", 0);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
         {
-            Destroy(this.gameObject);
+            Application.Quit();
         }
-        DontDestroyOnLoad(this.gameObject);
-    }*/
+        if (score > highScore) {
+            highScore = score;
+            PlayerPrefs.SetInt("Highscore", highScore);
+        }
+    }
 
     public void endLevel()
     {
         if (SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCountInBuildSettings)
         {
-            Debug.Log("MISSHION COMPREE");
+            Debug.Log("Level complete!");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
     private void OnGUI()
     {
-        GUI.Label(new Rect(10,10,100,200), "Score: " + score);
+        GUIStyle style = GUI.skin.GetStyle("label");
+        style.fontSize = 30;
+
+        GUI.Label(new Rect(10, 10, 200, 80), "Highscore: " + highScore);
+        GUI.Label(new Rect(10, 40, 200, 80), "Score: " + score);
     }
 }
