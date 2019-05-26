@@ -8,6 +8,7 @@ TagManager:
   - player
   - audioController
   - walls
+  - potion
   layers:
   - Default
   - TransparentFX

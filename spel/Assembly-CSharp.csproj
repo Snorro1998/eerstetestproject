@@ -60,16 +60,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_Game\Scripts\Camera_Control.cs" />
-    <Compile Include="Assets\_Game\Scripts\Player_Movement.cs" />
-    <Compile Include="Assets\_Game\Scripts\scrCoin.cs" />
-    <Compile Include="Assets\_Game\Scripts\scrScore.cs" />
-    <Compile Include="Assets\scrAudioManager.cs" />
-    <Compile Include="Assets\scrBadguy.cs" />
-    <Compile Include="Assets\scrDontDestroy.cs" />
-    <Compile Include="Assets\scrEndLevel.cs" />
-    <Compile Include="Assets\scrHurt.cs" />
-    <Compile Include="Assets\Sound.cs" />
+    <Compile Include="Assets\_Game\Scripts\AnimatedTexture.cs" />
+    <Compile Include="Assets\_Game\Scripts\AudioManager.cs" />
+    <Compile Include="Assets\_Game\Scripts\Badguy.cs" />
+    <Compile Include="Assets\_Game\Scripts\CameraControl.cs" />
+    <Compile Include="Assets\_Game\Scripts\Checkpoint.cs" />
+    <Compile Include="Assets\_Game\Scripts\Coin.cs" />
+    <Compile Include="Assets\_Game\Scripts\Controller.cs" />
+    <Compile Include="Assets\_Game\Scripts\DontDestroy.cs" />
+    <Compile Include="Assets\_Game\Scripts\EndLevel.cs" />
+    <Compile Include="Assets\_Game\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\_Game\Scripts\Potion.cs" />
+    <Compile Include="Assets\_Game\Scripts\Sound.cs" />
+    <Compile Include="Assets\_Game\Scripts\TileTexture.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Henk/Documents/eerstetestproject/spel/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
