@@ -69,6 +69,7 @@
     <Compile Include="Assets\_Game\Scripts\Controller.cs" />
     <Compile Include="Assets\_Game\Scripts\DontDestroy.cs" />
     <Compile Include="Assets\_Game\Scripts\EndLevel.cs" />
+    <Compile Include="Assets\_Game\Scripts\EndScore.cs" />
     <Compile Include="Assets\_Game\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\_Game\Scripts\Potion.cs" />
     <Compile Include="Assets\_Game\Scripts\Sound.cs" />

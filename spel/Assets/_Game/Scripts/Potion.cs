@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Potion : MonoBehaviour
 {
@@ -21,8 +19,7 @@ public class Potion : MonoBehaviour
             {
                 dir = 1;
             }
-            //other.transform.GetComponent<Player_Movement>().gravDirection = dir;
-            FindObjectOfType<PlayerMovement>().gravDirection = dir;
+            other.transform.GetComponent<PlayerMovement>().gravDirection = dir;
             moveAway();
         }
     }

@@ -11,8 +11,6 @@ public class EndLevel : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //FindWithTag
-        //FindObjectOfType<scrScore>().endLevel();
         GameController.GetComponent<Controller>().endLevel();
     }
 }

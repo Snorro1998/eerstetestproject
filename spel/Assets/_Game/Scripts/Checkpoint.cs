@@ -15,11 +15,16 @@ public class Checkpoint : MonoBehaviour
     {
         if (other.transform.tag == "player" && !rb.useGravity)
         {
-            Debug.Log("Mayo");
+            Debug.Log("Checkpoint reached!");
             rb.useGravity = true;
             other.transform.GetComponent<PlayerMovement>().startPosition = transform.position;
             FindObjectOfType<AudioManager>().playSound("Hayo");
             gameObject.GetComponent<AnimatedTexture>().index = 1;
         }
+    }
+
+    private void Update()
+    {
+        if (rb.transform.position.y < -5) Destroy(gameObject);
     }
 }

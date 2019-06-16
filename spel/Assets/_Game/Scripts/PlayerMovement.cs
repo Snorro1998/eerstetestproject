@@ -53,6 +53,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         FindObjectOfType<AudioManager>().playSound("Dead");
         transform.position = startPosition;
+        rb.velocity = new Vector3(0,0,0);
 
         for (int i = 0; i < gameObjects.Length; i++)
         {

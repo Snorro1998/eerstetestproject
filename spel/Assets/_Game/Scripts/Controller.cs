@@ -5,6 +5,7 @@ public class Controller : MonoBehaviour
 {
     public int score = 0;
     public int highScore = 0;
+    public bool showScore = true;
 
     private void Start()
     {
@@ -34,10 +35,13 @@ public class Controller : MonoBehaviour
 
     private void OnGUI()
     {
-        GUIStyle style = GUI.skin.GetStyle("label");
-        style.fontSize = 30;
+        if (showScore)
+        {
+            GUIStyle style = GUI.skin.GetStyle("label");
+            style.fontSize = 30;
 
-        GUI.Label(new Rect(10, 10, 200, 80), "Highscore: " + highScore);
-        GUI.Label(new Rect(10, 40, 200, 80), "Score: " + score);
+            GUI.Label(new Rect(10, 10, 300, 80), "Highscore: " + highScore);
+            GUI.Label(new Rect(10, 40, 300, 80), "Score: " + score);
+        }
     }
 }
